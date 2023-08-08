@@ -11,10 +11,11 @@ type Arista struct {
 	// Peso de la arista.
 	peso int
 }
+
 func nuevaArista(destino string, peso int) Arista {
 	return Arista{
 		destino: destino,
-		peso: peso,
+		peso:    peso,
 	}
 }
 

@@ -6,7 +6,7 @@ import (
 )
 
 // Calcula el orden topológico de un grafo dirigido.
-func OrdenTopologico(g *Grafo) ([]string, error){
+func OrdenTopologico(g *Grafo) ([]string, error) {
 	orden := make([]string, 0)
 	if !g.dirigido {
 		return nil, fmt.Errorf("OrdenTopologico: el grafo debe ser dirigido")
@@ -22,10 +22,10 @@ func OrdenTopologico(g *Grafo) ([]string, error){
 			cola.Encolar(v.nombre)
 		}
 	}
-	
+
 	// Recorremos la cola.
 	for !cola.EstaVacia() {
-		nombre,_ := cola.Desencolar()
+		nombre, _ := cola.Desencolar()
 		orden = append(orden, nombre)
 		for _, adyacente := range g.Adyacentes(nombre) {
 			gradoEntrada[adyacente]--
