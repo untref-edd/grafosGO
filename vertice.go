@@ -3,6 +3,7 @@ package grafos
 import (
 	"fmt"
 )
+
 // Vértices es una estructura que representa a los vértices de un grafo.
 type Vertice struct {
 	// Nombre del vértice.
@@ -12,10 +13,11 @@ type Vertice struct {
 	// Grado de entrada del vértice. Para Orden Topológico.
 	gradoEntrada int
 }
+
 func nuevoVertice(nombre string) *Vertice {
 	return &Vertice{
-		nombre: nombre,
-		aristas: make([]Arista, 0),
+		nombre:       nombre,
+		aristas:      make([]Arista, 0),
 		gradoEntrada: 0,
 	}
 }

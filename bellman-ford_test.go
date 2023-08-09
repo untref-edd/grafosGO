@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestBellmanFord(t *testing.T){
+func TestBellmanFord(t *testing.T) {
 	g := NuevoGrafo(true)
 	g.AgregarArista("a", "b", 1)
 	g.AgregarArista("a", "c", 1)
@@ -19,10 +19,10 @@ func TestBellmanFord(t *testing.T){
 	}
 	fmt.Println("Distancia")
 	for k, v := range distancia {
-		fmt.Printf("dist(%s) = %d\n",k, v)
+		fmt.Printf("dist(%s) = %d\n", k, v)
 	}
 	fmt.Println("Padre")
 	for k, v := range padre {
-		fmt.Printf("padre(%s) = %s\n",k, v)
+		fmt.Printf("padre(%s) = %s\n", k, v)
 	}
 }

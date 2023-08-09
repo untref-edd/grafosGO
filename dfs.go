@@ -1,9 +1,8 @@
 package grafos
 
-
 // Recorrido en profundidad (DFS)
 // Complejidad en tiempo: O(|V| + |A|)
-func DFS(g *Grafo, Visitar func(string)){
+func DFS(g *Grafo, Visitar func(string)) {
 	visitados := make(map[string]bool)
 	for _, v := range g.Vertices() {
 		if !visitados[v.Nombre()] {
