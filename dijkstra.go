@@ -2,6 +2,11 @@ package grafos
 
 import (
 	"fmt"
+<<<<<<< HEAD
+=======
+	"math"
+
+>>>>>>> 44451bbf711dbed7c68d21c700f8b5a75bc176c6
 	Heap "github.com/untref-ed/heapGO"
 	"math"
 )

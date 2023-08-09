@@ -1,9 +1,12 @@
 package grafos
 
+<<<<<<< HEAD
 import (
 	"fmt"
 )
 
+=======
+>>>>>>> 44451bbf711dbed7c68d21c700f8b5a75bc176c6
 // Vértices es una estructura que representa a los vértices de un grafo.
 type Vertice struct {
 	// Nombre del vértice.
@@ -31,5 +34,9 @@ func (v *Vertice) GradoDeEntrada() int {
 }
 
 func (v *Vertice) String() string {
+<<<<<<< HEAD
 	return fmt.Sprintf("%s", v.nombre)
+=======
+	return v.nombre
+>>>>>>> 44451bbf711dbed7c68d21c700f8b5a75bc176c6
 }
