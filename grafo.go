@@ -54,7 +54,7 @@ func (g *Grafo) agregarArista(origen, destino string, peso int) error {
 	// chequeamos si la arista ya existe
 	for _, arista := range g.vertices[origen].aristas {
 		if arista.destino == destino {
-			return fmt.Errorf("la arista %s-%s ya existe", origen, destino)
+			return fmt.Errorf("La arista %s-%s ya existe", origen, destino)
 		}
 	}
 	// agregamos la arista

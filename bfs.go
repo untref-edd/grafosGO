@@ -33,7 +33,7 @@ import (
 
 func BFS(g *Grafo, s string, Visitar func(string)) error {
 	if !g.ExisteVertice(s) {
-		return fmt.Errorf("el nodo %s no existe", s)
+		return fmt.Errorf("El nodo %s no existe", s)
 	}
 	visitados := make(map[string]bool)
 	cola := Cola.NuevaCola[string]()
