@@ -31,7 +31,7 @@ import (
 	return orden, nil
 } */
 
-func BFS(g *Grafo, s string, Visitar func(string)) error {
+func BFS(g *Grafo, s string, Visitar func(string)) (error) {
 	if !g.ExisteVertice(s) {
 		return fmt.Errorf("El nodo %s no existe", s)
 	}

@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+
 // Grafo es una estructura que representa a un grafo.
 type Grafo struct {
 	// Lista de vértices del grafo.
@@ -41,7 +42,7 @@ func (g *Grafo) AgregarArista(origen, destino string, peso int) error {
 	}
 	// Agregamos la arista al vértice origen.
 	err := g.agregarArista(origen, destino, peso)
-
+	
 	// Si el grafo no es dirigido, agregamos la arista inversa
 	if err == nil && !g.dirigido {
 		err = g.agregarArista(destino, origen, peso)
@@ -63,6 +64,7 @@ func (g *Grafo) agregarArista(origen, destino string, peso int) error {
 	g.vertices[destino].gradoEntrada++
 	return nil
 }
+
 
 // Cantidad de Vértices
 func (g *Grafo) CantidadVertices() int {
@@ -88,7 +90,8 @@ func (g *Grafo) ExisteVertice(nombre string) bool {
 func (g *Grafo) String() string {
 	s := ""
 	s = s + "Cantidad de vértices: " + fmt.Sprint(g.CantidadVertices()) + "\n"
-	s = s + "----------------------------------\n"
+	s = s +"----------------------------------\n"
+
 
 	for nombre := range g.vertices {
 		s += nombre + " -> "

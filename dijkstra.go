@@ -2,8 +2,8 @@ package grafos
 
 import (
 	"fmt"
-	Heap "github.com/untref-ed/heapGO"
 	"math"
+	Heap "github.com/untref-ed/heapGO"
 )
 
 // Algoritmo de Dijkstra

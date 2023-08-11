@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-func TestBFS(t *testing.T) {
+func TestBFS(t *testing.T){
 	g := NuevoGrafo(false)
 	g.AgregarArista("A", "B", 1)
 	g.AgregarArista("A", "G", 1)
