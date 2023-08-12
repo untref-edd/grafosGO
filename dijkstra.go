@@ -19,8 +19,9 @@ func Dijkstra(g *Grafo, origen string) (map[string]int, map[string]string, error
 	heap := Heap.NuevoHeapMin(func(i, j string) int {
 		return distancia[i] - distancia[j]
 	})
+	inf := math.MaxInt32
 	for _, v := range g.vertices {
-		distancia[v.nombre] = math.MaxInt32
+		distancia[v.nombre] = inf
 		padre[v.nombre] = ""
 		visitado[v.nombre] = false
 	}
