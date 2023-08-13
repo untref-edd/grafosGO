@@ -20,7 +20,7 @@ func BellmanFord(g *Grafo, origen string) (map[string]int, map[string]string, er
 	}
 	distancia[origen] = 0
 	// Recorremos todas las aristas del grafo
-	for i := 0; i < len(g.vertices)-1; i++ {
+	for i := 1; i < len(g.vertices)-1; i++ {
 		for _, v := range g.vertices {
 			for _, arista := range v.aristas {
 				if distancia[arista.Destino()] > distancia[v.nombre]+arista.Peso() {
