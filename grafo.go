@@ -22,10 +22,10 @@ func NuevoGrafo(dirigido bool) *Grafo {
 }
 
 // Vertices devuelve la lista de vértices del grafo.
-func (g *Grafo) Vertices() []*Vertice {
-	vertices := make([]*Vertice, 0)
+func (g *Grafo) Vertices() []string {
+	vertices := make([]string, 0)
 	for _, v := range g.vertices {
-		vertices = append(vertices, v)
+		vertices = append(vertices, v.Nombre())
 	}
 	return vertices
 }

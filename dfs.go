@@ -6,8 +6,8 @@ package grafos
 func DFS(g *Grafo, Visitar func(string)){
 	visitados := make(map[string]bool)
 	for _, v := range g.Vertices() {
-		if !visitados[v.Nombre()] {
-			dfs(g, v.Nombre(), visitados, Visitar)
+		if !visitados[v] {
+			dfs(g, v, visitados, Visitar)
 		}
 	}
 }
