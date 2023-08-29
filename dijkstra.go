@@ -30,14 +30,16 @@ func Dijkstra(g *Grafo, origen string) (map[string]int, map[string]string, error
 	// Recorremos el heap
 	for !heap.EstaVacio() {
 		v, _ := heap.Extraer()
-		visitado[v] = true
-		// Recorremos los adyacentes
-		for _, arista := range g.vertices[v].aristas {
-			if distancia[arista.Destino()] > distancia[v]+arista.Peso() {
-				distancia[arista.Destino()] = distancia[v] + arista.Peso()
-				padre[arista.Destino()] = v
-				heap.Insertar(arista.Destino())
-			}	
+		if !visitado[v] {
+			visitado[v] = true
+			// Recorremos los adyacentes
+			for _, arista := range g.vertices[v].aristas {
+				if distancia[arista.Destino()] > distancia[v]+arista.Peso() {
+					distancia[arista.Destino()] = distancia[v] + arista.Peso()
+					padre[arista.Destino()] = v
+					heap.Insertar(arista.Destino())
+				}	
+			}
 		}
 	}
 	return distancia, padre, nil
