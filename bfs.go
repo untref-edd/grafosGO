@@ -7,7 +7,7 @@ import (
 )
 
 // BFS realiza un recorrido BFS sobre el grafo g comenzando en el nodo s.
-// Devuelve un slice con los nodos en el orden en que fueron visitados.
+// Procesa todos los vértices con la función Visitar.
 // Complejidad en tiempo: O(|V| + |A|)
 
 
